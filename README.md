@@ -8,11 +8,19 @@ Real-time Query for Hadoop.
 
 git clone https://github.com/cloudera/impala
 
-cd impala
+cd Impala
 
 yum install -y boost-devel gcc-c++ 
 
 ./buildall.sh
+
+## Building the Impala Jars.
+
+cd Impala/fe
+
+source ../bin/impala-config.sh
+
+mvn package -DskipTests=true
 
 ## For directions on setting up Impala, see
 
